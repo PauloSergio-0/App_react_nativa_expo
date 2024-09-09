@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      {/* <Image source={icon} ></Image> */}
+      <Image source={icon} style = {{width: 100, height: 100}}></Image>
       <Text
       selectable={true}
       selectionColor="red">Open up App.js as as to start working on your app!</Text>
