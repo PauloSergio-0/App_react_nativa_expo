@@ -7,9 +7,15 @@ export default function App() {
 
   const [base, setbase]= useState();
   const [altura, setaltura]= useState();
-  
-  function calcular(){
+  const [area, setarea]= useState();
 
+  function calcular(){
+    if(base >0 && altura >0){
+      setarea(parseFloat(area) * parseFloat(altura));
+      
+    }else{
+      setarea('Valor invpalido')
+    }
   }
   return (
     <View style={styles.container}>
@@ -31,16 +37,19 @@ export default function App() {
 
       <TextInput placeholder='Base'
       keyboardType='numeric'
-      onChangeText={setbase}>
+      onChangeText={a => setbase(a)}>
       </TextInput>
 
       <TextInput placeholder='Altura'
-      keyboardType='numeric'>
+      keyboardType='numeric'
+      onChangeText={a => setaltura(a)}>
       </TextInput>
 
       <Button
       title='Calcular'
-      color="Blue"></Button>
+      onPress={calcular}></Button>
+      {/* <text>{}</text> */}
+      {/* <StatusBar style="auto"></StatusBar> */}
     </View>
   );
 }
