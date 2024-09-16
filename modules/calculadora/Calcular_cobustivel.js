@@ -11,14 +11,14 @@ export default function Calcular_cobustivel() {
     const resultado = value_alcool / value_gasolina;
     if (value_alcool && value_gasolina) {
       if (resultado < 0.7) {
-        setMessage("Abastecer com Álcool");
+        alert("Abastecer com Álcool");
       } else if (isNaN(resultado)) {
-        setMessage(""); // Caso de erro no cálculo, deixar vazio
+        alert(""); // Caso de erro no cálculo, deixar vazio
       } else {
-        setMessage("Abastecer com Gasolina");
+        alert("Abastecer com Gasolina");
       }
     } else {
-      setMessage("Por favor, insira valores válidos");
+      alert("Por favor, insira valores válidos");
     }
   };
 
